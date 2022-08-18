@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TicketMaster | Search</title>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d376955e9a.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+
+    <nav class="navbar fixed-top">
+      <span class="navbar-brand mb-0 h2">TicketMaster</span>
+      <input type="checkbox" id="js-toggle-theme"
+        class="toggle__check">
+      <label for="js-toggle-theme" class="toggle__switch">Toggle</label>
+    </nav>
+
+    <main class="mt-5">
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col mx-auto">
+            <form class="text-center" id="js-form-search">
+              <div class="input-group">
+                <input type="text" class="form-control input--light"
+                  id="js-input-search" required aria-label="Search"
+                  placeholder="Search for an event...">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary btn--light" type="submit" id="js-btn-search">
+                    <i class="fas fa-search"></i> Search</button>
+                    <a href="https://app.ticketmaster.com/partners/v1/events/0B004D43F86C478F/availability?apikey=GkB8Z037ZfqbLCNtZViAgrEegbsrZ6Ne&getBaseprice=true">asdfasdf</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="js-display-row" style="display: none;">
+          <div class="col-12">
+            <h1 class="result__header" id="js-display-header"></h1>
+          </div>
+        </div>
+        <div id="js-results" class="row"></div>
+      </div>
+    </main>
+    <footer class="py-3 mt-auto footer text-right">
+      <div class="container">
+      </div>
+    </footer>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

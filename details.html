@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>TicketMaster | Details</title>
+
+		<link rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.min.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/d376955e9a.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+	</head>
+
+	<body class="d-flex flex-column h-100">
+
+		<nav class="navbar fixed-top navbar-expand-lg">
+			<span class="navbar-brand mb-0 h1">TicketMaster</span>
+			<div class="toggle__container">
+				<input type="checkbox" id="js-toggle-theme"
+					class="toggle__check">
+				<label for="js-toggle-theme"
+					class="toggle__switch mr-4">Toggle</label>
+			</div>
+			<button class="navbar-toggler navbar__toggler"
+				data-toggle="collapse" data-target="#navbar-search">
+				<span class="navbar__toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse input--absolute" id="navbar-search">
+				<form class="text-center mt-lg-0 mt-3" id="js-form-search">
+					<div class="input-group">
+						<input type="text" class="form-control input--med"
+							id="js-input-details-search" required aria-label="Search"
+							placeholder="Search for an event...">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary btn--med"
+								type="submit" id="js-btn-details-search">
+								<i class="fas fa-search"></i> Search
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+		<main class="mt-5">
+			<div class="container">
+				<div class="row mt-5 mb-3">
+
+					<div class="col-12">
+						<h3 class="card-title">
+							<span id="js-details-event"></span>
+						</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-3 mx-auto card--fixed">
+						<div class="card mb-4">
+							<div class="card-body">
+								<p class="card-text brief__date">
+									Date: <span class="brief--bold"
+										id="js-brief-date"></span>
+								</p>
+								<p class="card-text brief__time mb-0">
+									Time: <span class="brief--bold"
+										id="js-brief-time"></span>
+								</p>
+								<div class="mr-auto mb-3">
+									<p class="card-text mb-0">Exp. Temp:
+										<span id="js-details-temp"
+											class="brief--bold"></span>
+									</p>
+									<p id="js-details-weather"
+										class="card-text text-capitalize"></p>
+								</div>
+								<!-- <a id="js-brief-link" target="_blank"
+									class="brief__link" href="#">
+									<p class="card-text brief__address">
+										<span id="js-brief-location"></span>
+									</p>
+									<p class="card-text brief__address">
+										<span id="js-brief-address"></span>
+									</p>
+									<p class="card-text brief__address">
+										<span id="js-brief-city"></span>
+										<span id="js-brief-state"></span>
+										<span id="js-brief-zip"></span>
+									</p>
+								</a> -->
+							</div>
+							<div class="card-img-top" style="height: 250px;"
+								id="js-map"></div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-8 col-lg-9 mx-auto mb-5">
+						<div class="card">
+							<img src="#" alt="" class="card-img-top"
+								id="js-details-image">
+							<div class="card-body">
+								<div class="d-flex mb-3 justify-content-end">
+									<a id="js-details-tickets" class="card-text btn
+										btn-outline-secondary btn--med
+										align-self-center" target="_blank" href="#">
+										<i class="fas fa-ticket-alt"></i> Buy Tickets
+									</a>
+								</div>
+								<p class="card-text details__text">
+									<span class="details__strong">Disclaimer: </span>
+									<span id="js-details-note"></span>
+								</p>
+								<p class="card-text details__text">
+									<span class="details__strong">Information: </span>
+									<span id="js-details-info"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+		<footer class="py-3 mt-auto footer text-right">
+			<div class="container">
+
+			</div>
+		</footer>
+
+		<script src="./assets/js/app.js"></script>
+
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0-dvyKeZxEJ8n5kjGMWreZDoRw0BUaxg&callback=initMap">
+		</script>
+	</body>
+</html>
